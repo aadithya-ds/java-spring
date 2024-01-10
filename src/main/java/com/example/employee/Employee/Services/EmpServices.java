@@ -68,4 +68,8 @@ public class EmpServices {
     public Employee getSingleEmp(int id) {
         return emprepo.findById(id).orElse(null);
     }
+
+    public List<Employee> getEmployeebyname(String name) {
+        return emprepo.findByName(name);
+    }
 }

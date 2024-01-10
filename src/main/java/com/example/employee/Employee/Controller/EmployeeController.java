@@ -41,6 +41,11 @@ private EmployeeRepo employeeRepo;
     return empServices.getSingleEmp(id);
    }
 
+    @GetMapping("/getEmpbyname/{name}")
+    public List<Employee> getEmployeebyname(@PathVariable String name){
+        return empServices.getEmployeebyname(name);
+    }
+
     @PutMapping("/update/{id}")
     public String updateEmployee(@PathVariable int id,@RequestBody EmployeeDTO employeeDTO){
         return empServices.updateEmp(id,employeeDTO);
