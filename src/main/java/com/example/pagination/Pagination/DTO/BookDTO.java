@@ -1,18 +1,16 @@
 package com.example.pagination.Pagination.DTO;
 
-import jakarta.persistence.Column;
+import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-
 @Data
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class BookDTO {
 
     private int id;
 
+    @NotBlank(message = "Book title must not be blank")
     private String bookTitle;
 
     private String author;

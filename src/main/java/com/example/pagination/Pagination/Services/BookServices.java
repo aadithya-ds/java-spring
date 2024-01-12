@@ -1,5 +1,6 @@
 package com.example.pagination.Pagination.Services;
 
+import com.example.pagination.Pagination.DTO.BookDTO;
 import com.example.pagination.Pagination.Entity.Book;
 import com.example.pagination.Pagination.Repo.BookRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,13 @@ public class BookServices {
 
         PageRequest pageRequest = PageRequest.of(page,size);
         return brepo.findAll(pageRequest);
+    }
+
+    public String addBooks(BookDTO bookDTO) {
+
+        Book book = new Book(bookDTO);
+        Book savedbook = brepo.save(book);
+
+        return savedbook.toString();
     }
 }

@@ -1,8 +1,11 @@
 package com.example.pagination.Pagination.Controller;
 
 
+import com.example.pagination.Pagination.DTO.BookDTO;
 import com.example.pagination.Pagination.Entity.Book;
+import com.example.pagination.Pagination.GlobalExceptionHandler;
 import com.example.pagination.Pagination.Services.BookServices;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,6 +29,11 @@ public class BookController {
         return bookServices.getallbooks(page,size);
     }
 
+    @PostMapping("/add")
+    public String addBook( @Valid @RequestBody   BookDTO bookDTO) throws GlobalExceptionHandler {
+        return bookServices.addBooks(bookDTO);
+    }
+
     @GetMapping("/logs")
     public String getLog(){
         log.trace("This is a TRACE message");
@@ -34,6 +42,6 @@ public class BookController {
         log.warn("This is a WARN message");
         log.error("This is an ERROR message");
 
-        return "Logger Exicuted";
+        return "Logger Executed";
     }
 }
