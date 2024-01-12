@@ -13,5 +13,6 @@ public class BookDTO {
     @NotBlank(message = "Book title must not be blank")
     private String bookTitle;
 
+    @NotBlank(message = "Book author must not be blank")
     private String author;
 }
