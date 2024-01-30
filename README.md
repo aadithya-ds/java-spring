@@ -3,4 +3,6 @@
 =>Address
 
 #It uses openFeign to communicate with the microserices.
-To run this - http://localhost:8080/employees/{empid}
+To run this -
+First run both microservice
+http://localhost:8080/employees/{empid}
