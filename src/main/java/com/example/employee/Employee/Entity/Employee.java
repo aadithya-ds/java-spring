@@ -2,6 +2,7 @@ package com.example.employee.Employee.Entity;
 
 
 import com.example.employee.Employee.DTO.EmployeeDTO;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,11 +17,17 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
+
     @Column(name = "age")
+    @Schema(description = "Employee's Age", example = "22")
     private int age;
+
     @Column(name = "name")
+    @Schema(description = "Employee's Name", example = "Adam")
     private String name;
+
     @Column(name = "address")
+    @Schema(description = "Employee's Address", example = "California")
     private String address;
 
 

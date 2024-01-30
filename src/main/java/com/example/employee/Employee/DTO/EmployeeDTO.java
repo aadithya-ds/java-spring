@@ -1,6 +1,7 @@
 package com.example.employee.Employee.DTO;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 
@@ -16,10 +17,13 @@ public class EmployeeDTO {
 
     private int id;
 
+    @Schema(description = "Employee's Age", example = "22")
     private int age;
 
+    @Schema(description = "Employee's Name", example = "Adam")
     private String name;
 
+    @Schema(description = "Employee's Address", example = "California")
     private String address;
 
     public void setId(int id) {
