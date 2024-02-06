@@ -49,6 +49,10 @@ public class BookController {
             logger.trace("This is a TRACE message in getAllBooks");
         }
 
+        if (logger.isDebugEnabled()) {
+            logger.debug("This is a DEBUG message in getAllBooks");
+        }
+
         return new ResponseEntity<>(bookService.getAllBooks(),HttpStatus.OK);
     }
 
