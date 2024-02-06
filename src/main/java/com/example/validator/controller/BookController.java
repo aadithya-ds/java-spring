@@ -44,6 +44,11 @@ public class BookController {
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks(){
         logger.info("Fetching all books");
+
+        if (logger.isTraceEnabled()) {
+            logger.trace("This is a TRACE message in getAllBooks");
+        }
+
         return new ResponseEntity<>(bookService.getAllBooks(),HttpStatus.OK);
     }
 
@@ -56,6 +61,11 @@ public class BookController {
             return new ResponseEntity<>(book, HttpStatus.OK);
         } else {
             logger.warn("Book with id {} not found", id);
+            try {
+                throw new RuntimeException("Simulated error in getBookById");
+            } catch (Exception e) {
+                logger.error("Error in getBookById:", e);
+            }
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
