@@ -1,0 +1,57 @@
+ Here are some important IntelliJ IDEA shortcuts:
+
+### Navigation Shortcuts:
+
+- **Ctrl + N (Cmd + N on macOS):** Open class.
+- **Ctrl + Shift + N (Cmd + Shift + N on macOS):** Open file.
+- **Ctrl + Alt + Shift + N (Cmd + Alt + Shift + N on macOS):** Open symbol (search by symbol name).
+- **Ctrl + E (Cmd + E on macOS):** Recent files.
+- **Ctrl + Shift + E (Cmd + Shift + E on macOS):** Recent edited files.
+- **Ctrl + F12 (Cmd + F12 on macOS):** Show file structure (outline).
+- **Alt + F7 (Cmd + F7 on macOS):** Find usages.
+
+### Editing Shortcuts:
+
+- **Ctrl + Space:** Basic code completion.
+- **Ctrl + Shift + Space:** Smart code completion.
+- **Ctrl + P:** Parameter info.
+- **Ctrl + Q (Cmd + J on macOS):** Quick documentation lookup.
+- **Ctrl + Alt + L (Cmd + Alt + L on macOS):** Reformat code.
+- **Ctrl + / (Cmd + / on macOS):** Comment/uncomment lines.
+- **Ctrl + W (Cmd + W on macOS):** Extend selection.
+- **Ctrl + Shift + W (Cmd + Shift + W on macOS):** Shrink selection.
+
+### Refactoring Shortcuts:
+
+- **Ctrl + Alt + M (Cmd + Alt + M on macOS):** Extract method.
+- **Ctrl + Alt + V (Cmd + Alt + V on macOS):** Extract variable.
+- **Ctrl + Alt + F (Cmd + Alt + F on macOS):** Extract field.
+- **Ctrl + Alt + C (Cmd + Alt + C on macOS):** Extract constant.
+- **Shift + F6:** Rename.
+
+### Navigation Bar Shortcuts:
+
+- **Alt + Home (Cmd + Up on macOS):** Show navigation bar.
+- **Alt + Left/Right (Cmd + [ or ] on macOS):** Navigate backward/forward.
+- **Alt + F1:** Select target for view (e.g., switch between Project and Editor).
+
+### Version Control Shortcuts:
+
+- **Alt + 9:** Version control tool window.
+- **Ctrl + K:** Commit changes.
+- **Ctrl + T:** Update project.
+
+### Debugging Shortcuts:
+
+- **Shift + F9:** Debug.
+- **Shift + F10:** Run.
+- **F8:** Step over.
+- **F7:** Step into.
+- **Shift + F8:** Step out.
+
+### Other Useful Shortcuts:
+
+- **Ctrl + Shift + A (Cmd + Shift + A on macOS):** Find action.
+- **Ctrl + Shift + F10 (Cmd + Shift + F10 on macOS):** Run the project.
+- **Ctrl + Shift + Alt + T (Cmd + Shift + Alt + T on macOS):** Surround with.
+
