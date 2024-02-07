@@ -1,9 +1,11 @@
 package com.auth.springsecurity.controller;
 
+import com.auth.springsecurity.dto.Product;
 import com.auth.springsecurity.entity.AuthRequest;
 import com.auth.springsecurity.entity.UserInfo;
 import com.auth.springsecurity.services.JwtService;
 import com.auth.springsecurity.services.UserInfoService;
+import jakarta.annotation.security.RolesAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -26,7 +28,7 @@ public class UserController {
 
     @GetMapping("/welcome")
     public String welcome(){
-        return "Welcome to my Authentication and Authorization !!";
+        return "This is an unsecured endpoint !!";
     }
 
     @PostMapping("/addUser")
@@ -43,14 +45,18 @@ public class UserController {
             throw new UsernameNotFoundException("Invalid user request");
         }
     }
-    @GetMapping("/getUsers")
-    @PreAuthorize("hasAuthority('ADMIN_ROLES')")
-    public List<UserInfo> getAllUsers(){
-        return userInfoService.getAllUser();
+    @GetMapping("secured/getUsers")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    public List<Product> getAllUsers(){
+        return userInfoService.getProducts();
     }
-    @GetMapping("/getUsers/{id}")
-    @PreAuthorize("hasAuthority('USER_ROLES')")
-    public UserInfo getAllUsers(@PathVariable Integer id){
-        return userInfoService.getUser(id);
+
+    @GetMapping("secured/getUsers/{id}")
+    @RolesAllowed({"USER","ADMIN"})
+    public Product getAllUsers(@PathVariable Integer id){
+
+        return userInfoService.getProduct(id);
     }
+
+
 }
